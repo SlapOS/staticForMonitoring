@@ -22,6 +22,11 @@ $(document).ready(function() {
            
             $("iframe").attr('src', url + '?script=' + encodeURIComponent(message));
         });
+        $(".link").click(function(e) {
+            e.preventDefault();
+            var url = $(this).attr('href');
+            $("iframe").attr('src', url);
+        });
     }
     else {
         //in an iframe
